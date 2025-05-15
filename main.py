@@ -31,17 +31,18 @@ async def webhook(request: Request):
     # Формируем сообщение
     sub1 = data.get("sub1", "N/A")
     status = data.get("status", "N/A")
-    payout = data.get("payout", "0")
+    revenue = data.get("revenue", "0")
     currency = data.get("currency", "USD")
     campaign = data.get("campaign", "N/A")
+    adset = data.get("adset", "N/A")
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     msg = (
         "📥 <b>Новая конверсия!</b>\n\n"
         f"🎯 <b>Событие:</b> <i>{status}</i>\n"
-        f"💰 <b>Выплата:</b> <i>{payout} {currency}</i>\n"
+        f"💰 <b>Выплата:</b> <i>{revenue} {currency}</i>\n"
         f"📛 <b>Кампания:</b> <i>{campaign}</i>\n"
-        f"📛 <b>Адсет:</b> <i>{campaign}</i>\n"
+        f"📛 <b>Адсет:</b> <i>{adset}</i>\n"
         f"⏰ <b>Время:</b> <i>{timestamp}</i>"
     )
 
