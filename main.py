@@ -37,12 +37,12 @@ async def webhook(request: Request):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     msg = (
-        "📥 <b>Keitaro Postback</b>\n\n"
-        f"👤 <b>sub1:</b> <i>{sub1}</i>\n"
-        f"🎯 <b>Status:</b> <i>{status}</i>\n"
-        f"💰 <b>Payout:</b> <i>{payout} {currency}</i>\n"
-        f"📛 <b>Campaign:</b> <i>{campaign}</i>\n"
-        f"⏰ <b>Time:</b> <i>{timestamp}</i>"
+        "📥 <b>Новая конверсия!</b>\n\n"
+        f"🎯 <b>Событие:</b> <i>{status}</i>\n"
+        f"💰 <b>Выплата:</b> <i>{payout} {currency}</i>\n"
+        f"📛 <b>Кампания:</b> <i>{campaign}</i>\n"
+        f"📛 <b>Адсет:</b> <i>{campaign}</i>\n"
+        f"⏰ <b>Время:</b> <i>{timestamp}</i>"
     )
 
     # Отправка в Telegram
